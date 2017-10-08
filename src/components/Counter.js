@@ -1,10 +1,15 @@
 import React from 'react'
 
 export default (props) => {
+
+  handleClick = () => {
+    props.store.dispatch( { type: 'INCREASE_COUNT' } )
+  }
+
   return (
     <div>
       <button onClick={handleClick}>Click Me</button>
-      <div>0</div>
+      <div>{props.store.getState().count}</div>
     </div>
   )
 };
