@@ -1,4 +1,4 @@
-
+import { render } from './index.js';
 export default function createStore(reducer) {
 
   let state;
